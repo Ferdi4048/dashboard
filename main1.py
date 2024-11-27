@@ -39,7 +39,7 @@ def display_image(cluster_folder, goodcluster_folder, selected_image):
 
 # Sélection des dossiers avec Streamlit
 cluster_choice = st.selectbox('Choose a Cluster file:', ['Cluster', 'Cluster1', 'Cluster2'])
-goodcluster_choice = st.selectbox('Choisir a GoodCluster file:', ['GoodCluster', 'GoodCluster1', 'GoodCluster2'])
+goodcluster_choice = st.selectbox('Choose a GoodCluster file:', ['GoodCluster', 'GoodCluster1', 'GoodCluster2'])
 
 # Sélection des images disponibles dans le dossier choisi
 cluster_folder = folders[cluster_choice]
