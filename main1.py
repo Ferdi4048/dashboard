@@ -38,8 +38,8 @@ def display_image(cluster_folder, goodcluster_folder, selected_image):
         st.warning(f"L'image {selected_image} n'existe pas dans '{goodcluster_folder}'.")
 
 # Sélection des dossiers avec Streamlit
-cluster_choice = st.selectbox('Choisir un dossier Cluster:', ['Cluster', 'Cluster1', 'Cluster2'])
-goodcluster_choice = st.selectbox('Choisir un dossier GoodCluster:', ['GoodCluster', 'GoodCluster1', 'GoodCluster2'])
+cluster_choice = st.selectbox('Choose a Cluster file:', ['Cluster', 'Cluster1', 'Cluster2'])
+goodcluster_choice = st.selectbox('Choisir a GoodCluster file:', ['GoodCluster', 'GoodCluster1', 'GoodCluster2'])
 
 # Sélection des images disponibles dans le dossier choisi
 cluster_folder = folders[cluster_choice]
@@ -49,7 +49,7 @@ goodcluster_folder = folders[goodcluster_choice]
 cluster_images = [f for f in os.listdir(cluster_folder) if os.path.isfile(os.path.join(cluster_folder, f))]
 
 # Sélection de l'image à afficher
-selected_image = st.selectbox('Sélectionner une image:', cluster_images)
+selected_image = st.selectbox('Select an image:', cluster_images)
 
 # Affichage de l'image
 if selected_image:
