@@ -1,6 +1,5 @@
 import os
 import streamlit as st
-from PIL import Image
 
 # Dossiers disponibles
 folders = {
@@ -27,21 +26,13 @@ def display_image(cluster_folder, goodcluster_folder, selected_image):
         # Affichage des deux images côte à côte avec Streamlit
         col1, col2 = st.columns(2)
         
-        # Calcul de la taille de l'image multipliée par 10
-        cluster_image = Image.open(cluster_image_path)
-        goodcluster_image = Image.open(goodcluster_image_path)
-        
-        # Obtenir les dimensions de l'image et les multiplier par 10
-        cluster_width, cluster_height = cluster_image.size
-        goodcluster_width, goodcluster_height = goodcluster_image.size
-        
-        # Affichage de l'image du dossier 'cluster' avec taille augmentée
+        # Affichage de l'image du dossier 'cluster'
         with col1:
-            st.image(cluster_image_path, caption=f"Cluster: {selected_image}", width=cluster_width*10)
+            st.image(cluster_image_path, caption=f"Cluster: {selected_image}", use_container_width=True)
         
-        # Affichage de l'image du dossier 'goodcluster' avec taille augmentée
+        # Affichage de l'image du dossier 'goodcluster'
         with col2:
-            st.image(goodcluster_image_path, caption=f"GoodCluster: {selected_image}", width=goodcluster_width*10)
+            st.image(goodcluster_image_path, caption=f"GoodCluster: {selected_image}", use_container_width=True)
         
     else:
         st.warning(f"L'image {selected_image} n'existe pas dans '{goodcluster_folder}'.")
