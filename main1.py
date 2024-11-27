@@ -5,12 +5,12 @@ import streamlit as st
 
 # Dossiers disponibles
 folders = {
-    'Cluster': '/content/Cluster',
-    'Cluster1': '/content/Cluster1',
-    'Cluster2': '/content/Cluster2',
-    'GoodCluster': '/content/GoodCluster',
-    'GoodCluster1': '/content/GoodCluster1',
-    'GoodCluster2': '/content/GoodCluster2'
+    'Cluster': 'Cluster',
+    'Cluster1': 'Cluster1',
+    'Cluster2': 'Cluster2',
+    'GoodCluster': 'GoodCluster',
+    'GoodCluster1': 'GoodCluster1',
+    'GoodCluster2': 'GoodCluster2'
 }
 
 # Vérification de l'existence des dossiers
